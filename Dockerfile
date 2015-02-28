@@ -92,9 +92,10 @@ ADD elixir_sample.sh /etc/service/elixir_sample/run
 EXPOSE 5000
 
 RUN mkdir /application
-ADD . /application
 
 WORKDIR /application
+ADD mix.exs /application/mix.exs
 RUN /usr/local/bin/mix do deps.get, deps.compile
+ADD . /application
 RUN MIX_ENV=production /usr/local/bin/mix release
 
