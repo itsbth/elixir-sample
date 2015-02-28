@@ -12,7 +12,10 @@ defmodule ElixirSample.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: [:logger, :cauldron]]
+    [
+      mod: { ElixirSample, [] },
+      applications: [:logger, :cauldron]
+    ]
   end
 
   # Dependencies can be Hex packages:
