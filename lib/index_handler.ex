@@ -3,7 +3,7 @@ defmodule IndexHandler do
     {:ok, req, :no_state}
   end
   def handle(request, state) do
-    {:ok, reply} = :cowboy_req.reply(200, [{"content-type", "text/plain"}], "Hello, World!", request)
+    {:ok, reply} = :cowboy_req.reply(200, [{"content-type", "text/plain"}], "Hello, Sharparam!", request)
     {:ok, reply, state}
   end
   def terminate(_reason, _request, _state) do
