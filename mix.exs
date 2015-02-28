@@ -14,7 +14,7 @@ defmodule ElixirSample.Mixfile do
   def application do
     [
       mod: { ElixirSample, [] },
-      applications: [:logger, :cauldron]
+      applications: [:logger, :cowboy, :ranch]
     ]
   end
 
@@ -29,7 +29,7 @@ defmodule ElixirSample.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     [
-      {:cauldron, "~> 0.1.5"},
+      {:cowboy, "1.0.0"},
       {:exrm, "~> 0.15.1"}
     ]
   end
