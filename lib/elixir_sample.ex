@@ -6,3 +6,5 @@ defmodule ElixirSample do
   end
 end
 
+Cauldron.start ElixirSample, port: 5000
+

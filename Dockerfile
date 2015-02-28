@@ -96,4 +96,5 @@ ADD . /application
 
 WORKDIR /application
 RUN /usr/local/bin/mix do deps.get, deps.compile
+RUN MIX_ENV=production /usr/local/bin/mix release
 
